@@ -41,6 +41,10 @@ Practicing typescript applying blockchain concept.
 ## Optional Types
 
 > ?
+
+Not mandatory or required.
+
+Optional
 ```
   const life : {
     time: number,
@@ -72,4 +76,78 @@ Practicing typescript applying blockchain concept.
 
                                   |--return type--|
     const makePerson = (name: String) : Player => ({name})
+```
+
+> Readonly
+
+Typescript aborts compilation when readonly variable's value is being changed.
+
+```
+  const life : {
+    readonly time: number
+  } = { ... }
+
+  const number : readonly numbers[] = [1,2,3]
+```
+
+> Tuple
+
+An array with minimum amount of elements with specific types in order.
+
+```
+  const chaos : [boolean, string, number] = [false, "Udon", 9]
+```
+
+> any
+
+For escaping type check.
+
+```
+  const fruit = {
+    name: any
+  }
+```
+
+> unknown
+
+Keyword for when the data type is not known.<br>
+(E.g. Getting some data from API's);
+
+```
+  let receivedData : unknown;
+
+  if (typeof receivedData === 'string') {
+    receivedData.charAt(0);
+  }
+
+  if (typeof receivedData === 'number') {
+    receivedData.isNaN;
+  }
+```
+
+> void
+
+For functions that do not return anything, very similar to Java.
+
+```
+  const toEmpty = () => {
+    console.log("Hi, mom")
+  }
+```
+
+> never
+
+A type that should or could never happen, excecute, run.<br>
+A type that cannot return return anything.
+
+```
+  const toLive = (health : string | number) => {
+    if (typeof health === 'string') {
+      health  // This will be string type.
+    } else if (typeof health === 'number') {
+      health  // This will be number type.
+    } else {
+      health  // This will be never type.
+    }
+  }
 ```
