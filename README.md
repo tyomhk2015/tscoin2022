@@ -2,7 +2,7 @@
 Practicing typescript applying blockchain concept.
 
 
-## Why Typescript?
+## Why Typescript? ✔️
 
 * Because of type safety.
 * Reduces chance of bugs occur compared to normal javascript.
@@ -11,13 +11,13 @@ Practicing typescript applying blockchain concept.
 * Helps detecting codes that could not be excecuted or may have potential errors before running the code.
 * Reduces chances of fixing code.
 
-## How Typescript Work?
+## How Typescript Work? ✔️
 * Checks the code before actually running the code.
 * TS -- (Compilation) -- JS
 * If there are any errors in Typescript file, the file will not be compiled to JS file.
 * Checks type using 'type inference'.
 
-## How to set types?
+## How to set types? ✔️
 > Implicit Types
 ```
   let food = "Sushi"
@@ -38,7 +38,7 @@ Practicing typescript applying blockchain concept.
   Useful when Typescript cannnot infer the type of the variables.
 ```
 
-## Optional Types
+## Optional Types ✔️
 
 > ?
 
@@ -149,5 +149,72 @@ A type that cannot return return anything.
     } else {
       health  // This will be never type.
     }
+  }
+```
+
+## Call Signatures ✔️
+
+Information of what type should the paremeters and return of a function should be.<br>
+You can see the information by hover the cursor on top of the name of the function.
+
+```
+const add = (a: number, b:number) => a + b
+
+// Call Signature
+const add: (a: number, b:number) => number
+
+type Add = (a: number, b:number) => number
+
+const add : Add = (a: number, b:number) => a + b
+```
+
+Before writing a function, think about the types the function may use or need.
+
+## Overloading ✔️
+
+Adding multiple & different call signatures in an existing signature, similar to overloading in Java.
+
+```
+// Two ways of making call signatures.
+// 1.
+  type Add = (a: number, b:number) => number
+
+// 2.
+  type Add = {
+    (a: number, b:number) : number
+  }
+
+No.2 is for overloading.
+
+  type Add = {
+    (a: number, b:number) : number
+    (a: number, b:string) : number
+  }
+```
+
+## Polymorphism ✔️
+
+'Many differnt forms or structures'
+
+Can accept any types dynamically by inferring the parameters.
+
+```
+  type showArray = {
+    (arr: number[]) : void
+    (arr: string[]) : void
+    (arr: boolean[]) : void
+    ...
+  }
+
+  ↓↓
+
+  type showArray = {
+    <T>(arr: T[]) : void
+    ...
+  }
+
+  type delArray = {
+    <T>(arr: T[]) : T  // 'T' is generic type.
+    ...
   }
 ```
