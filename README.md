@@ -218,3 +218,29 @@ Can accept any types dynamically by inferring the parameters.
     ...
   }
 ```
+
+## Class
+
+> abstract class
+
+A class that cannot not be used for creating instances, but can be extended to other class.
+
+> absctract method
+
+A method that is not implemented, but has call signature.
+
+> private
+
+Accessible only inside the class where the variable / methods was first created.
+
+> public
+
+Accessible outside of the class, and via instances.
+
+> protected
+
+Accessible within sub-class, but not instances.
+
+> etc
+
+Class can be used as type.
