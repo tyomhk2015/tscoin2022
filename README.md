@@ -219,7 +219,7 @@ Can accept any types dynamically by inferring the parameters.
   }
 ```
 
-## Class
+## Class ✔️
 
 > abstract class
 
