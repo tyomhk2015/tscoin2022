@@ -232,7 +232,8 @@ Can accept any types dynamically by inferring the parameters.
 
 > abstract class
 
-A class that cannot not be used for creating instances, but can be extended to other class.
+A class that cannot not be used for creating instances, but can be extended to other class.<br>
+A blueprint of a class.
 
 > absctract method
 
@@ -294,5 +295,12 @@ interface Fruit {
 type Fruit = Vegie & {}
 
 interface Fruit extends Vegie {}
+
+---
+
+interface Human {}
+interface Nation {}
+
+class American extends Human, Nation {}
 ```
 
