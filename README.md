@@ -152,6 +152,15 @@ A type that cannot return return anything.
   }
 ```
 
+## Constraining types ✔️
+
+```
+type Protocol = "HTTP" | "HTTPS" | "TCP"
+
+const specificRule : Protocol = "IP" // typescript error occurs.
+const anotherRule : Protocol = "TCP" // no typescript error.
+```
+
 ## Call Signatures ✔️
 
 Information of what type should the paremeters and return of a function should be.<br>
@@ -227,7 +236,8 @@ A class that cannot not be used for creating instances, but can be extended to o
 
 > absctract method
 
-A method that is not implemented, but has call signature.
+A method that is not implemented, but has call signature.<br>
+*Abstract: Making the function inferrable while hiding the detail of logics.
 
 > private
 
@@ -244,3 +254,45 @@ Accessible within sub-class, but not instances.
 > etc
 
 Class can be used as type.
+
+```
+// To write a type that has multiple keys.
+ [key: string] : string
+ ...
+ [key: number] : string
+```
+
+## Interface ✔️
+
+For explaining the shape of the object to Typescript<br>
+Similar to type.
+
+Interface is used for defining types for objects, not constraining values.
+
+```
+Interface:
+
+Constrain/attach/define only the types to variables in an object.
+
+
+Type:
+
+Constrain/attach/define not only the types but also values to variables in an object.
+```
+
+```
+type Fruit = {
+  name: "Durian";
+}
+
+interface Fruit {
+  name: string;
+}
+
+---
+
+type Fruit = Vegie & {}
+
+interface Fruit extends Vegie {}
+```
+
