@@ -304,3 +304,16 @@ interface Nation {}
 class American extends Human, Nation {}
 ```
 
+## Installing
+
+1. npm init -y
+2. Erase or modify key-value that has 'index.js'
+3. npm i -D typescript
+4. touch tsconfig.json (or create manually)
+
+```
+tsconfig.json
+
+Tells VSCode that the project is using Typescript, and this will enable autocompletions related to typescript.
+```
+

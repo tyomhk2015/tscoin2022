@@ -1,0 +1,22 @@
+{
+  "name": "tscoin2022",
+  "version": "1.0.0",
+  "description": "Practicing typescript applying blockchain concept.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyomhk2015/tscoin2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyomhk2015/tscoin2022/issues"
+  },
+  "homepage": "https://github.com/tyomhk2015/tscoin2022#readme",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
+}
