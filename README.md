@@ -315,5 +315,12 @@ class American extends Human, Nation {}
 tsconfig.json
 
 Tells VSCode that the project is using Typescript, and this will enable autocompletions related to typescript.
+
+
+"lib" property
+
+Tell typescript what kind of api should it be monitor and auto-complete.
 ```
+
+## Declaration Files
 
