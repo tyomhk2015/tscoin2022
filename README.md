@@ -355,7 +355,7 @@ Useful for transforming old JS file to typescript without changing the code.
 
 ```
 
-## JS-DOC
+## JSDOC
 
 Writing specification of logics or functions using comments, which does not affect the original JS file.
 
@@ -372,3 +372,19 @@ No types need to be written in the original JS file.
   }
 ```
 
+## Applying TS feature to a JS module
+
+> https://github.com/DefinitelyTyped/DefinitelyTyped
+
+```
+// Only if the package does not provide d.ts file
+
+// E.g.
+npm i -D @types/node
+```
+
+## Resources
+
+> https://www.typescriptlang.org/docs/handbook/intro.html
+
+> https://exploringjs.com/tackling-ts/toc.html
