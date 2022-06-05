@@ -324,3 +324,51 @@ Tell typescript what kind of api should it be monitor and auto-complete.
 
 ## Declaration Files
 
+The files that has '*.d.ts' extension.
+
+They let the typescript know the types of variables or functions that is not included in default libraries.
+
+```
+// newLibrary.d.ts
+
+declare module "newLibrary" { // "newLibrary" is the name of JS file library.
+  function hi(greeting: string) : string;
+}
+
+// newLibary.js
+
+export function hi(greeting) {
+  return `Hello there, ${greeting}`
+}
+```
+
+## @ts-check
+
+An annotation telling typescript to check JS file for types.
+
+Useful for transforming old JS file to typescript without changing the code.
+
+```
+// @ts-check
+
+...JS CODE...
+
+```
+
+## JS-DOC
+
+Writing specification of logics or functions using comments, which does not affect the original JS file.
+
+No types need to be written in the original JS file.
+
+```
+/**
+ * @param {string} greeting
+ * @returns {string}
+ ...
+ */
+  export function hi(greeting) {
+    return greeting
+  }
+```
+
